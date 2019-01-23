@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 53f7c9e5ae25f8643abf0bf06fd12c7f
+timeCreated: 1516225453
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Xanadu
+  fontNames:
+  - Xanadu
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
