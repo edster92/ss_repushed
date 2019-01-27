@@ -1,3 +1,7 @@
 Library/
 Packages/
 Temp/
+.vs/
+obj/
+Logs/
+ss_repushed.sln
