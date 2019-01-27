@@ -18,8 +18,8 @@ public class PlayerController : BasedGameObjects
 	public BaseWeapon Weapon;
 	[SerializeField]
 	UIprogressBar progressBar;
-    bool moveR = false;
-    bool moveL = false;
+    public bool moveR = false;
+    public bool moveL = false;
 
 	float immortalityTime;
 
@@ -40,11 +40,21 @@ public class PlayerController : BasedGameObjects
         PlayerController.instance = this;
     }
    // float currentMoveVector = anim.GetFloat("MoveVector");
+
+   public void PlayerFStart()
+    {
+        Weapon.FireStart();
+    }
+    public void PlayerFStop()
+    {
+        Weapon.FireEnd();
+    }
+
     void Update ()
     {
-		if (Input.GetMouseButtonDown (0) || Input.GetKeyDown (KeyCode.Space))
+		if (/*Input.GetMouseButtonDown (0) || */Input.GetKeyDown (KeyCode.Space))
 			Weapon.FireStart ();
-		if (Input.GetMouseButtonUp (0) || Input.GetKeyUp (KeyCode.Space))
+		if (/*Input.GetMouseButtonUp (0) || */Input.GetKeyUp (KeyCode.Space))
 			Weapon.FireEnd ();
         float currentMoveVector = anim.GetFloat("MoveVector");
 
@@ -66,8 +76,7 @@ public class PlayerController : BasedGameObjects
                 (mergeAnimationSpeed * Time.deltaTime * Mathf.Sign(currentMoveVector)) : currentMoveVector));
         }
         transform.localPosition = new Vector3 (currentXposition, transform.localPosition.y, transform.localPosition.z);
-        moveR = false;
-        moveL = false;
+
 
     }
 
@@ -84,6 +93,12 @@ public class PlayerController : BasedGameObjects
         float currentMoveVector = anim.GetFloat("MoveVector");
         currentXposition = Mathf.Clamp(currentXposition + (moveSpeedX * Time.deltaTime), Done_GameController.Instance.Xmin, Done_GameController.Instance.Xmax);
         anim.SetFloat("MoveVector", Mathf.Clamp(currentMoveVector + (mergeAnimationSpeed * Time.deltaTime), -1, 1));
+    }
+
+    public void StopMove ()
+    {
+        moveL = false;
+        moveR = false;
     }
 
     public override void Initialized()

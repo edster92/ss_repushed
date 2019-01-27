@@ -28,6 +28,7 @@ public class BaseWeapon : MonoBehaviour
 	{
 		fireOn = true;
 		StartCoroutine (Fire ());
+        Debug.Log("Fire_Start!!!!1");
 	}
 
 	protected virtual IEnumerator Fire ()
@@ -39,7 +40,8 @@ public class BaseWeapon : MonoBehaviour
 	{
 		StopCoroutine (Fire ());
 		fireOn = false;
-	}
+        Debug.Log("Fire_End!!!!1");
+    }
 
 	public virtual void WeaponLevelsUp ()
 	{
