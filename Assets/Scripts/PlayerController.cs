@@ -64,11 +64,13 @@ public class PlayerController : BasedGameObjects
         {
             
             MoveRight();
+            moveR = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow) || moveL == true)
         {
             
             MoveLeft();
+            moveL = false;
         }
         else
         {

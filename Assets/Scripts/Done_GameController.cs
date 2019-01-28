@@ -26,7 +26,7 @@ public class Done_GameController : MonoBehaviour
     GameObject UIcontrol;
 
     public Text scoreText;
-    public Text restartText;
+    public GameObject restartButton;
     public Text gameOverText;
     public Text weaponLvlTxt;
 
@@ -54,8 +54,7 @@ public class Done_GameController : MonoBehaviour
   //      StartCoroutine(SpawnBackGround());
         gameOver = false;
         restart = false;
-        restartText.text = "";
-        restartText.color = Color.clear;
+        restartButton.SetActive(false);
         gameOverText.color = Color.clear;
         gameOverText.text = "";
         score = 0;
@@ -83,21 +82,23 @@ public class Done_GameController : MonoBehaviour
     {
         if (gameOver)
         {
-            restartText.text = "Press 'R' for Restart";
-            restartText.color = new Color(1, 1, 1, alpha);
+            restartButton.SetActive(true);
             alpha += Time.deltaTime * 0.5f;
-            restart = true;
+           // restart = true;
             gameOverText.color = new Color(1, 1, 1, alpha);
         }
         if (restart)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) || restart == true)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }
-
+    public void rGame ()
+    {
+        restart = true;
+    }
     public void StartGame()
     {
         UIcontrol.SetActive(true);
