@@ -38,6 +38,7 @@ public class PlayerController : BasedGameObjects
     void Awake()
     {
         PlayerController.instance = this;
+ 
     }
    // float currentMoveVector = anim.GetFloat("MoveVector");
 
@@ -64,13 +65,13 @@ public class PlayerController : BasedGameObjects
         {
             
             MoveRight();
-            moveR = false;
+        //    moveR = false;
         }
         else if (Input.GetKey(KeyCode.LeftArrow) || moveL == true)
         {
             
             MoveLeft();
-            moveL = false;
+           // moveL = false;
         }
         else
         {
@@ -107,6 +108,8 @@ public class PlayerController : BasedGameObjects
     {
         Type = Types.player;
 		Done_GameController.Instance.UpdateHealth (HealthPoints);
+        ImmortalVisualObject.SetActive(false);
+        
     }
     public override void Death()
     {

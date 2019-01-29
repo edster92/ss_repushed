@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Shiekd_mat
   m_Shader: {fileID: 4800000, guid: d281a1af72ecee04287c895514f1bc6b, type: 3}
   m_ShaderKeywords: 
@@ -76,7 +77,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _ColorIntense: 1.69
+    - _ColorIntense: 0.81
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _Distort: 0.01
@@ -93,7 +94,7 @@ Material:
     - _NormalScale: 0.01
     - _OcclusionStrength: 1
     - _PAnner2: 0.16
-    - _Panner1: -0.5
+    - _Panner1: 1.04
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -106,6 +107,6 @@ Material:
     - _mask_intense: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0.37722206, b: 1, a: 0}
+    - _Color0: {r: 1, g: 0.84313726, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _pannerUV: {r: 0.26, g: 0.67, b: 0, a: 0}

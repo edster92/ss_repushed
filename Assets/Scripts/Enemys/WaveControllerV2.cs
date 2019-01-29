@@ -106,7 +106,7 @@ public class WaveControllerV2 : MonoBehaviour {
     public void StartWaves ()
     {
         startGame = true;
-        Done_GameController.Instance.StopBackround();
+    //    Done_GameController.Instance.StopBackround();
     }
     void SpawnEnemy (Transform _enemy)
     {

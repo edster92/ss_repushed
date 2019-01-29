@@ -101,6 +101,7 @@ public class Done_GameController : MonoBehaviour
     }
     public void StartGame()
     {
+
         UIcontrol.SetActive(true);
         Player.gameObject.SetActive(true);
         //	StartCoroutine (SpawnWaves ());
@@ -108,7 +109,7 @@ public class Done_GameController : MonoBehaviour
         //	StartCoroutine (SpawnBomb ());
         UpdateWeaponInfo();
         waveController.StartWaves();
-        
+
         background = false;
     }
 
@@ -232,7 +233,7 @@ public class Done_GameController : MonoBehaviour
         }
     }
 
-    public void SpawnEnemy()
+   /* public void SpawnEnemy()
     {
         GameObject hazard = hazards[Random.Range(0, hazards.Length)];
         Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
@@ -263,7 +264,7 @@ public class Done_GameController : MonoBehaviour
     {
         StartCoroutine(SpawnBackGround());
         Debug.LogWarning("Started!");
-    }
+    }*/
     public void QuiyGame ()
 	{
 		Application.Quit ();
